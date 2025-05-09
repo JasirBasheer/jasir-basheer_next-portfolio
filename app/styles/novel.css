@@ -1,0 +1,11 @@
+.novel-prose-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  .novel-prose-lg :where(p):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.3333333em;
+    margin-bottom: 1.3333333em;
+  }
+  
+  /* Add more styles as needed from Novel's documentation */

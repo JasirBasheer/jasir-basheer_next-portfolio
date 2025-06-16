@@ -20,15 +20,18 @@ const LatestArticlesClient: React.FC<Props> = ({ categories, articles: initialAr
         if (category === "Latest") {
             setArticles(initialArticles.slice(0, 5)); 
         } else {
-            setArticles(initialArticles.filter((item) => item.catagory === category));
+            console.log('setafrr')
+            console.log(category)
+            console.log(initialArticles)
+            setArticles(initialArticles.filter((item) => item.category === category));
         }
     };
 
     return (
-        <div className="w-full min-h-screen text-gray-300 mt-8 ">
+        <div className="w-full max-h-[41rem]  text-gray-300 mt-8 ">
             <h1 className="text-2xl font-bold text-white mb-6">Latest Articles</h1>
 
-            <div className="flex gap-8 mb-8 border-b border-gray-800 pb-2 overflow-hidden overflow-x-auto">
+            <div className="flex gap-8 mb-2 border-b border-gray-800 pb-2 overflow-hidden overflow-x-auto">
                 <button
                     key="Latest"
                     onClick={() => handleCategorySelect("Latest")}
@@ -57,8 +60,8 @@ const LatestArticlesClient: React.FC<Props> = ({ categories, articles: initialAr
 
             <div className="space-y-8">
                 {articles.map((article, index) => (
-                    <Link key={index} href={`/blogs/${article.category}/${article.slug}`}>
-                    <div className="flex gap-6 group  cursor-pointer" >
+                    <Link key={index} href={`/blog/${article.category}/${article.slug}`}>
+                    <div className="flex gap-6 group py-3 cursor-pointer border-b border-gray-800" >
                         <div className="w-24 h-24 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
                             {article.img === "backend" && (
                                 <div className="relative">

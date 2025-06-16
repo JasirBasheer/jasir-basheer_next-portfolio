@@ -2,11 +2,13 @@ import LatestArticlesClient from "./latest.articles.client";
 
 const fetchCategories = async () => {
     const res = await fetch("http://localhost:3000/api/categories", {
-        next: { revalidate: 86400 }, 
+        next: { revalidate: 60 },
     });
 
-    if (!res.ok) throw new Error("Failed to fetch categories");
-
+    if (!res.ok) {
+        return []
+        // throw new Error("Failed to fetch articles"); 
+    }
     const data = await res.json();
     return data.map((item: any) => item.title);
 };
@@ -16,14 +18,18 @@ const fetchArticles = async () => {
         next: { revalidate: 60 },
     });
 
-    if (!res.ok) throw new Error("Failed to fetch articles");
+    if (!res.ok) {
+        return []
+        // throw new Error("Failed to fetch articles"); 
+    }
 
     return res.json();
 };
 
 const LatestArticles = async () => {
-    const categories = await fetchCategories();
-    const articles = await fetchArticles();
+    const categories = await fetchCategories() || []
+    const articles = await fetchArticles()|| []
+
 
     return <LatestArticlesClient categories={categories} articles={articles} />;
 };

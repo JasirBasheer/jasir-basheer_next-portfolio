@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import { LuSunMedium, LuMoon } from "react-icons/lu";
 import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
 
 const SignGuestBook = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const router = useRouter()
 
   useEffect(() => {
     setMounted(true);
@@ -29,7 +31,7 @@ const SignGuestBook = () => {
           <LuMoon className="w-5 h-5 text-slate-400" />
         )}
       </button>
-      <button className="bg-blue-500 hover:bg-blue-600 transition-colors py-2 px-4 rounded-full text-sm font-medium text-white">
+      <button onClick={()=> router.push('/guestbook')} className="bg-blue-500 hover:bg-blue-600 transition-colors py-2 px-4 rounded-full text-sm font-medium text-white">
         Sign my guestbook
       </button>
     </div>

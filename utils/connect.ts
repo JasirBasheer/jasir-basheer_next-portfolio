@@ -1,19 +1,20 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '@prisma/client';
 
-// Correctly declare the global type
 declare global {
-  var prisma: PrismaClient | undefined
+  var prisma: PrismaClient | undefined;
 }
 
-let prisma: PrismaClient
+let prisma: PrismaClient;
 
 if (process.env.NODE_ENV === 'production') {
-  prisma = new PrismaClient()
+  console.log('Production DATABASE_URL:', process.env.DATABASE_URL);
+  prisma = new PrismaClient();
 } else {
   if (!global.prisma) {
-    global.prisma = new PrismaClient()
+    console.log('Development DATABASE_URL:', process.env.DATABASE_URL);
+    global.prisma = new PrismaClient();
   }
-  prisma = global.prisma
+  prisma = global.prisma;
 }
 
-export default prisma
+export default prisma;

@@ -1,10 +1,16 @@
+import Image from "next/image";
 
 export function Hero() {
     return (
       <div className="w-full ">
         <div className="sm:pt-14 pt-6 pb-5">
-          <img src="https://jasirbasheer-88232.web.app/static/media/inroimage2.6f991b66dc3698df2abe.jpg"  className='rounded-2xl h-[11rem] w-full' alt="Picture of the author"/>
-        </div>
+        <Image
+  src="/heroimage.jpeg"
+  className="rounded-2xl w-full h-auto max-h-[13rem] object-cover"
+  width={500}
+  height={500}
+  alt="Picture of the author"
+/>        </div>
   
         <h4 className='text-[1.3rem] font-poppins font-normal'>Hi, I'm <span className="font-poppins text-[#0EA5E9]">Jasir Basheer</span></h4>
   

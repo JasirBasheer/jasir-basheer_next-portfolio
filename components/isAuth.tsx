@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react';
 import { redirect } from "next/navigation";
 
 export const IsAuth = (Component:any) => {
-    const {data,status} = useSession()
+    const {status} = useSession()
     
     return function isAuth(props:any){
         if(status == "loading"){

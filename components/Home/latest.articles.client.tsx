@@ -20,9 +20,6 @@ const LatestArticlesClient: React.FC<Props> = ({ categories, articles: initialAr
         if (category === "Latest") {
             setArticles(initialArticles.slice(0, 5)); 
         } else {
-            console.log('setafrr')
-            console.log(category)
-            console.log(initialArticles)
             setArticles(initialArticles.filter((item) => item.category === category));
         }
     };

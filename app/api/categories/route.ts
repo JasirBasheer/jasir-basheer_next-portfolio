@@ -4,7 +4,6 @@ import prisma from '@/utils/connect'
 export const GET = async () => {
     try {
         const categories = await prisma.category.findMany()
-        console.log(categories,"categories")
         return NextResponse.json(categories, { status: 200 });
         
     } catch (error) {

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import React, { useEffect, useState, use } from 'react'
 
@@ -9,7 +10,7 @@ import Prism from 'prismjs';
 
 import 'prismjs/themes/prism-tomorrow.css';
 
-const Blog = ({ params }: { slug: string[] }) => {
+const Blog = ({ params }: { params:any }) => {
     const [blog, setBlog] = useState<any>({})
     const { slug }: { slug: string[] } = use(params);
     const [category, blogId] = slug

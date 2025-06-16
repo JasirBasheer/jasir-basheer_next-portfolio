@@ -12,7 +12,7 @@ export function Hero() {
   alt="Picture of the author"
 />        </div>
   
-        <h4 className='text-[1.3rem] font-poppins font-normal'>Hi, I'm <span className="font-poppins text-[#0EA5E9]">Jasir Basheer</span></h4>
+        <h4 className='text-[1.3rem] font-poppins font-normal'>Hi, I&apos;m <span className="font-poppins text-[#0EA5E9]">Jasir Basheer</span></h4>
   
         <h1 className='sm:text-[2.6rem] text-[2rem] font-custom font-medium'>
           I make <span className='text-[#16A34A]'>full-stack</span> products that people <span className="text-[#F472B6]">love.</span>

@@ -8,6 +8,7 @@ import Playlist from "@/components/playlist";
 import Achievements from "@/components/HomePageComponents/Achievements";
 import LatestProjects from "@/components/HomePageComponents/LatestProjects";
 
+
 export default function Home() {
   return (
     <div className="min-h-screen w-full bg-white dark:bg-slate-900">

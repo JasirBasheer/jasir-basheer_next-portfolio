@@ -1,12 +1,12 @@
-import LatestArticles from "@/components/home/latest.articles.server";
-import { Hero } from "../../components/home/hero";
-import SocialMedias from "../../components/home/social.medias";
+import LatestArticles from "@/components/home/LatestArticlesServer";
+import { Hero } from "../../components/home/Hero";
+import SocialMedias from "../../components/home/SocialMedias";
 import NewsLetter from "../../components/newsLetter";
 import SignGuestBook from "../../components/sign.guestBook";
 import IcreateContent from "@/components/icreate-content";
 import Playlist from "@/components/playlist";
-import Achievements from "@/components/home/achievements";
-import LatestProjects from "@/components/home/latest.projects";
+import Achievements from "@/components/home/Achievements";
+import LatestProjects from "@/components/home/LatestProjects";
 
 export default function Home() {
   return (

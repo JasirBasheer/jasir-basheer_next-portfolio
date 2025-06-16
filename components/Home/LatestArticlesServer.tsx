@@ -1,4 +1,4 @@
-import LatestArticlesClient from "./latest.articles.client";
+import LatestArticlesClient from "./LatestArticlesClient";
 
 const fetchCategories = async () => {
     const res = await fetch("http://localhost:3000/api/categories", {

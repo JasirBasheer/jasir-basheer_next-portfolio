@@ -26,7 +26,7 @@ interface Comment {
 
 export const GET = async () => {
   try {
-    const articles = await prisma.blog.findMany();
+    const articles = await prisma.blog.findMany() || []
 
     return NextResponse.json(articles as Blog[], { status: 200 });
   } catch (error) {

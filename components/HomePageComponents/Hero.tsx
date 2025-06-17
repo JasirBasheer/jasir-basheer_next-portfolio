@@ -5,7 +5,7 @@ export function Hero() {
     <div className="w-full ">
       <div className="sm:pt-14 pt-6 pb-5">
         <Image
-          src="/heroimage.jpeg"
+          src="/heroimage.png"
           className="rounded-2xl w-full h-auto max-h-[13rem] object-cover"
           width={500}
           height={500}

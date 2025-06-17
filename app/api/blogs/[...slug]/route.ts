@@ -1,30 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server';
-import prisma from '@/utils/connect';
+// import prisma from '@/utils/connect';
 
-interface Blog {
-    id: string;
-    createdAt: Date;
-    slug: string;
-    title: string;
-    desc: string;
-    img?: string | null; // Optional, can be string or null
-    views: number;
-    content: string;
-    catSlug: string;
-    category: string;
-    comments: Comment[];
-  }
+// interface Blog {
+//     id: string;
+//     createdAt: Date;
+//     slug: string;
+//     title: string;
+//     desc: string;
+//     img?: string | null; // Optional, can be string or null
+//     views: number;
+//     content: string;
+//     catSlug: string;
+//     category: string;
+//     comments: Comment[];
+//   }
   
-  interface Comment {
-    id: string;
-    createdAt: Date;
-    desc: string;
-    userEmail: string;
-    blogSlug: string;
-    // Optionally include user and blog if needed, but avoid circular references
-    // user?: User; // Define User interface if needed
-    // blog?: Blog; // Avoid including to prevent deep nesting
-  }
+//   interface Comment {
+//     id: string;
+//     createdAt: Date;
+//     desc: string;
+//     userEmail: string;
+//     blogSlug: string;
+//     // Optionally include user and blog if needed, but avoid circular references
+//     // user?: User; // Define User interface if needed
+//     // blog?: Blog; // Avoid including to prevent deep nesting
+//   }
 
 export const GET = async (
   req: NextRequest,
@@ -42,12 +42,13 @@ export const GET = async (
 
     const [category, blogId] = slug;
 
-    const article = await prisma.blog.findFirst({
-      where: {
-        slug: blogId,
-        category: category,
-      },
-    });
+    // const article = await prisma.blog.findFirst({
+    //   where: {
+    //     slug: blogId,
+    //     category: category,
+    //   },
+    // });
+    const article = {}
 
     if (!article) {
       return NextResponse.json(
@@ -56,7 +57,7 @@ export const GET = async (
       );
     }
 
-    return NextResponse.json(article as Blog, { status: 200 });
+    return NextResponse.json(article , { status: 200 });
   } catch (error) {
     console.error('Error fetching blog:', error);
     return NextResponse.json(

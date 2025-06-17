@@ -1,3 +1,5 @@
+"use client"
+
 import LatestArticles from "@/components/HomePageComponents/LatestArticlesServer";
 import { Hero } from "@/components/HomePageComponents/Hero";
 import SocialMedias from "@/components/HomePageComponents/SocialMedias";

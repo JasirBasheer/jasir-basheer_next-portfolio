@@ -27,8 +27,11 @@ const fetchArticles = async () => {
 };
 
 const LatestArticles = async () => {
-    const categories = await fetchCategories() || []
-    const articles = await fetchArticles()|| []
+    // const categories = await fetchCategories() || []
+    // const articles = await fetchArticles()|| []
+
+    const categories =  []
+    const articles =  []
 
 
     return <LatestArticlesClient categories={categories} articles={articles} />;

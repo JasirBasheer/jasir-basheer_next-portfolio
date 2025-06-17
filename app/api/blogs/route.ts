@@ -31,9 +31,6 @@ export const GET = async () => {
     return NextResponse.json(articles as Blog[], { status: 200 });
   } catch (error) {
     console.error('Error fetching blogs:', error);
-    return NextResponse.json(
-      { message: 'Something went wrong!' },
-      { status: 500 }
-    );
+    return NextResponse.json([], { status: 200 });
   }
 };

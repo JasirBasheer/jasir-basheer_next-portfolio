@@ -8,9 +8,6 @@ export const GET = async () => {
         
     } catch (error) {
         console.error("Categories error:", error);
-                return NextResponse.json(
-            { message: "Something went wrong!" },
-            { status: 500 }
-        );
+        return NextResponse.json([], { status: 200 });
     }
 }

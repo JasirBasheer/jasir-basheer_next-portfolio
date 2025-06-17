@@ -1,7 +1,7 @@
 import LatestArticlesClient from "./LatestArticlesClient";
-
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 const fetchCategories = async () => {
-    const res = await fetch("http://localhost:3000/api/categories", {
+    const res = await fetch(`${apiUrl}/api/categories`, {
         next: { revalidate: 60 },
     });
 
@@ -14,7 +14,7 @@ const fetchCategories = async () => {
 };
 
 const fetchArticles = async () => {
-    const res = await fetch("http://localhost:3000/api/blogs", {
+    const res = await fetch(`${apiUrl}/api/blogs`, {
         next: { revalidate: 60 },
     });
 

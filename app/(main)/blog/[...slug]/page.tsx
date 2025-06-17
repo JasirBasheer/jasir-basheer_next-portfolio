@@ -15,6 +15,8 @@ const Blog = ({ params }: { params:any }) => {
     const { slug }: { slug: string[] } = use(params);
     const [category, blogId] = slug
     const router = useRouter();
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
     useEffect(() => {
         Prism.highlightAll();
     }, [blog.content]);
@@ -33,7 +35,7 @@ const Blog = ({ params }: { params:any }) => {
 
     const getBlog = async () => {
         try {
-            const res = await fetch(`http://localhost:3000/api/blogs/${category}/${blogId}`)
+            const res = await fetch(`${apiUrl}/api/blogs/${category}/${blogId}`)
             const blog = await res.json()
             if (!blog) return
             blog.content = wrapImages(blog.content);

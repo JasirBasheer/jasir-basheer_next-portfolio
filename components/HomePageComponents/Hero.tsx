@@ -23,8 +23,8 @@ export function Hero() {
         people <span className="text-[#F472B6]">love.</span>
       </h1>
       <p className="mt-4 font-poppins font-normal text-[rgb(148,163,184)] text-[1.1rem]">
-        Developer, 2x acquired Founder, Indie Hacker, OSS Contributor, Guitarist
-        and Student. I play read, write and travel for fun.
+        Developer, Founder, fetla Certified Hacker, OPS Contributor, Designer
+        and Student. I play, read, write and travel for fun.
       </p>
     </div>
   );

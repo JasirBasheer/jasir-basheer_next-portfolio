@@ -7,6 +7,7 @@ import IcreateContent from "@/components/icreate-content";
 import Playlist from "@/components/playlist";
 import Achievements from "@/components/HomePageComponents/Achievements";
 import LatestProjects from "@/components/HomePageComponents/LatestProjects";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -28,9 +29,9 @@ export default function Home() {
                   <p className="font-normal max-w-2xl text-slate-600 dark:text-slate-400">
                     I also create content to inspire and help others get started
                     with coding, and share my experiences as a developer and
-                    entrepreneur. With more than 20,000 followers on instagram,
+                    entrepreneur.
                     I have a small but growing community of developers. Check it
-                    out here - itsjasirhere
+                    out here - <Link href="/i" className="text-blue-500 underline">itsjasirhere</Link>
                   </p>
                 </div>
                 <LatestArticles />

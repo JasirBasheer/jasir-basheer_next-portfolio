@@ -1,32 +1,30 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Achievements = () => {
   const achievements = [
     {
-      title: 'Buildspace s5 Grant',
-      image: 'https://dhravya.dev/_next/image?url=https%3A%2F%2Fi.dhr.wtf%2Fr%2Fcloudflare-patent.png&w=750&q=75',
+      title: 'Winner #2 Hackero , fetlla',
+      image: '/fetla.png',
+      link:'/'
     },
     {
-      title: 'Patent (pending) @Cloudflare',
-      image: 'https://dhravya.dev/_next/image?url=https%3A%2F%2Fi.dhr.wtf%2Fr%2Fcloudflare-patent.png&w=750&q=75',
+      title: 'ThinkerSpace Member',
+      image: '/thinkerspace.jpg',
+      link:'/'
+    },
+    
+    {
+      title: 'Core Memeber @ Brogrammers',
+      image: '/brogrammerscore.jpg',
+      link:'/'
     },
     {
-      title: 'Mentor @Calhacks',
-      image: 'https://dhravya.dev/_next/image?url=https%3A%2F%2Fi.dhr.wtf%2Fr%2Fcloudflare-patent.png&w=750&q=75',
-    },
-    {
-      title: 'Neo Scholar finalist',
-      image: 'https://dhravya.dev/_next/image?url=https%3A%2F%2Fi.dhr.wtf%2Fr%2Fcloudflare-patent.png&w=750&q=75',
-    },
-    {
-      title: 'Winner #2, Calhacks',
-      image: 'https://dhravya.dev/_next/image?url=https%3A%2F%2Fi.dhr.wtf%2Fr%2Fcloudflare-patent.png&w=750&q=75',
-    },
-    {
-      title: 'Winner #2, Sunhacks',
-      image: 'https://dhravya.dev/_next/image?url=https%3A%2F%2Fi.dhr.wtf%2Fr%2Fcloudflare-patent.png&w=750&q=75',
+      title: 'Fetlla Certified Hacker',
+      image: '/fetla2.png',
+      link:'/'
     },
   ];
 
@@ -55,7 +53,7 @@ const Achievements = () => {
             <div className="absolute bottom-16 left-0 text-white font-poppins   right-0 p-4 z-20">
               <h3 className="text-md font-semibold">{achievement.title}</h3>
             </div>
-            <button className="absolute bottom-4 right-4 bg-white rounded-full p-2 z-20">
+            <Link href={achievement.link || ''} className="absolute bottom-4 right-4 cursor-pointer bg-white rounded-full p-2 z-20">
               <svg
                 className="w-6 h-6 text-blue-500"
                 fill="currentColor"
@@ -63,7 +61,7 @@ const Achievements = () => {
               >
                 <path d="M8 5v14l11-7z" />
               </svg>
-            </button>
+            </Link>
           </div>
         ))}
       </div>

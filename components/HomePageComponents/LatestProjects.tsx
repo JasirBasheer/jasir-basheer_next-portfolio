@@ -1,67 +1,152 @@
-import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
-import React from 'react';
-
+'use client'
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import React from "react";
+// text-[#cfe091ba]
+//text-[#a99561]
 const LatestProjects = () => {
+  const router = useRouter()
   const projects = [
     {
-      title: 'Supermemory',
-      description:
-        "AI second brain for your team. Supermemory is a tool that helps you capture, organize, and retrieve information from your team's conversations and documents.",
-      icon: '🧠',
+      title: "Dibolky tool",
+      description:(
+        <>
+          Dibolky tool is a <span className="underline text-blue-400">SaaS platform</span> for SMMAs and creators to  <span className=" ">manage content, leads, and scheduling with ease and automation</span>.
+        </>
+      ),
+      icon: "/dibolky.png",
+      link: "https://github.com/JasirBasheer/Dibolky",
+      isOpenSource: false,
+      isWorkingInProgress: true,
+      isClientProject: false,
     },
     {
-      title: 'Supermemory DB',
+      title: "Inker",
       description:
-        'Vector database I made for Supermemory. Fully serverless and infinitely scalable by using Cloudflare R2 and Durable objects.',
-      icon: '🗄️',
+        "Built backend systems with secure APIs for user and blog management. Led contributor workflows and collaborated across teams on key technical decisions.",
+      icon: "/inker.jpg",
+      link: "https://github.com/TheByteFlow/Inker",
+      isOpenSource: true,
+      isWorkingInProgress: false,
+      isClientProject: false,
     },
     {
-      title: 'Markdowner',
+      title: "Reachoutmore",
       description:
-        'Converts websites to LLM-ready markdown data. I built this to help me with Supermemory.',
-      icon: '⚡',
+        "A platform that helps agencies and creators run campaigns effortlessly through automation.",
+      icon: "/reachoutmore1.png",
+      link: "https://github.com/JasirBasheer/reachoutmore",
+      isOpenSource: false,
+      isWorkingInProgress: false,
+      isClientProject: false,
     },
     {
-      title: 'Discord Bot to Portfolio',
-      description:
-        'A discord bot that creates a website for yours as you talk to it.',
-      icon: '🤖',
+      title: "Thefamroot",
+      description:(<>A platform that helps to create and explore family trees, <span className="">mapping relationships between members with ease.</span></>),
+      icon: "/thefamroot2.png",
+      link: "https://github.com/JasirBasheer/thefamroot",
+      isOpenSource: false,
+      isWorkingInProgress: true,
+      isClientProject: false,
     },
     {
-      title: 'Radish',
+      title: "Akmal Groups",
       description:
-        'Super fast drop-in replacement of the in memory key-value store Redis, made in Golang',
-      icon: '🥕',
+        (<>A modern landing page built with TailwindCSS and GSAP. Clean design, smooth animations. Made to grab attention and convert clients fast.</>),
+      icon: "/akmal.jpg",
+      link: "https://github.com/Dibolky-Tech/akmal-groups",
+      isOpenSource: false,
+      isWorkingInProgress: false,
+      isClientProject: true,
     },
     {
-      title: 'Lecture Chat',
+      title: "Spy.steps",
       description:
-        'A virtual TA that listens to the lecture and answers your doubts in real time.',
-      icon: '💬',
+        "An online marketplace for custom rings and necklaces, constructed with HB and Node.js, leverages MongoDB for seamless database management.",
+      icon: "/spysteps.png",
+      link: "https://github.com/JasirBasheer/Spy.steps",
+      isOpenSource: false,
+      isWorkingInProgress: false,
+      isClientProject: false,
     },
+     // {
+    //   title: "Netflix clone",
+    //   description:
+    //     "The platform is built with React.js, IMDb API, and Firebase database for efficient data handling and a user-friendly interface.",
+    //   icon: "/netflix.png",
+    //   link: "/",
+    //   isOpenSource: false,
+    //   isWorkingInProgress: false,
+    //   isClientProject: false,
+    // },
+    // {
+    //   title: "Online compiler",
+    //   description:
+    //     "An online coding environment, developed with React.js, offers users a platform to code and collaborate seamlessly.",
+    //   icon: "/thecoder.png",
+    //   link: "/link",
+    //   isOpenSource: false,
+    //   isWorkingInProgress: false,
+    //   isClientProject: false,
+    // },
   ];
 
   return (
     <div className="w-full text-gray-300 mt-12">
-      <h2 className="text-2xl text-white font-poppins font-semibold mb-4">Latest projects</h2>
+      <h2 className="text-2xl text-white font-poppins font-semibold mb-4">
+        Latest projects
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2  gap-4">
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`relative  rounded-lg px-6 py-3 shadow-lg flex flex-col justify-between border-[1px] border-[#1e293b] bg-[#1b2537] bg-opacity-80 backdrop-blur-sm mb-1 font-poppins font-normal transition-transform duration-300 ${(index + 1) % 2 === 0 ? 'rotate-1 hover:rotate-0' : '-rotate-1 hover:rotate-0'} cursor-pointer`}
+            className={`relative  rounded-lg px-6 py-3 shadow-lg flex flex-col justify-between border-[1px] border-[#1e293b] bg-[#1b2537] bg-opacity-80 backdrop-blur-sm mb-1 font-poppins font-normal transition-transform duration-300 ${
+              (index + 1) % 2 === 0
+                ? "rotate-1 hover:rotate-0"
+                : "-rotate-1 hover:rotate-0"
+            } cursor-pointer`}
           >
             <div>
-              <div className="text-3xl mb-1">{project.icon}</div>
+              <div className="flex items-center justify-between">
+                <Image
+                  src={project.icon}
+                  alt="icon"
+                  className="w-10 h-10 my-2 rounded-full"
+                  width={500}
+                  height={500}
+                />
+                <div className="flex gap-2">
+                  {project.isOpenSource && (
+                    <div className="text-[11px] bg-[#38942691] px-2 py-1 text-white rounded-full">
+                      Open-source
+                    </div>
+                  )}
+                  {project.isWorkingInProgress && (
+                    <div className="text-[11px] bg-[#264b9491] px-2 py-1 text-white rounded-full">
+                      WIP
+                    </div>
+                  )}
+                  {project.isClientProject && (
+                    <div className="text-[11px] bg-[#948d2691] px-2 py-1 text-white rounded-full">
+                      Client
+                    </div>
+                  )}
+                </div>
+              </div>
               <h3 className="text-lg font-medium mb-1">{project.title}</h3>
-              <p className="text-[12px] font-medium text-gray-400">{project.description}</p>
+              <p className="text-[12px] font-medium text-gray-400">
+                {project.description}
+              </p>
             </div>
-            <ChevronRight className='self-end w-4 mt-1 text-blue-500'/>
+            
+            <ChevronRight onClick={()=>router.push(project.link)} className="self-end w-4 mt-1 text-blue-500" />
           </div>
         ))}
       </div>
       <p className="mt-6 text-white text-sm">
-        See list of all my projects{' '}
+        See list of all my projects{" "}
         <Link href="/projects" className="underline text-blue-500">
           On my projects page
         </Link>

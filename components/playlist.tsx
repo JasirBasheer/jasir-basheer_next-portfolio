@@ -3,9 +3,9 @@ import React from "react";
 
 const Playlist = () => {
   return (
-    <Link href={'asdf'}>
+    <Link href={'https://open.spotify.com/playlist/5vEMk9RjzHKMHA4GTft6vd?si=FS8MWpMSQCC12lSUBhgNSQ'}>
     <div
-      className="lg:w-[20rem] h-[11rem] border-[1px] border-[#1e293b] rounded-lg p-5 bg-[#1b2537] bg-opacity-80 backdrop-blur-sm mb-2 relative overflow-hidden"
+      className="lg:w-[20rem] h-[11rem] border-[1px] border-[#1e293b] rounded-2xl p-5 bg-[#1b2537] bg-opacity-80 backdrop-blur-sm mb-2 relative overflow-hidden"
       style={{
         backgroundImage: `url('https://i.scdn.co/image/ab67706c0000da84b80903ef954198f942abfe6d')`,
         backgroundSize: "cover",

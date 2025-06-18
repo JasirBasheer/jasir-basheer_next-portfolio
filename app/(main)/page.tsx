@@ -31,7 +31,7 @@ export default function Home() {
                     with coding, and share my experiences as a developer and
                     entrepreneur.
                     I have a small but growing community of developers. Check it
-                    out here - <Link href="/i" className="text-blue-500 underline">itsjasirhere</Link>
+                    out here - <Link href="https://www.youtube.com/@itsjasirhere" className="text-blue-500 underline">itsjasirhere</Link>
                   </p>
                 </div>
                 <LatestArticles />

@@ -26,7 +26,7 @@ const LatestArticlesClient: React.FC<Props> = ({ categories, articles: initialAr
 
     return (
         <div className="w-full max-h-[41rem]  text-gray-300 mt-8 ">
-            <h1 className="text-2xl font-bold text-white mb-6">Latest Articles</h1>
+            <h1 className="text-2xl font-bold dark:text-white text-black mb-6">Latest Articles</h1>
 
             <div className="flex gap-8 mb-2 border-b border-gray-800 pb-2 overflow-hidden overflow-x-auto">
                 <button
@@ -34,7 +34,7 @@ const LatestArticlesClient: React.FC<Props> = ({ categories, articles: initialAr
                     onClick={() => handleCategorySelect("Latest")}
                     className={`pb-2 px-1 ${
                         selectedCategory === "Latest"
-                            ? "border-b-2 border-blue-500 text-white"
+                            ? "border-b-2 border-blue-500 dark:text-white text-black"
                             : "text-gray-400 hover:text-gray-200"
                     }`}
                 >

@@ -95,7 +95,7 @@ const LatestProjects = () => {
 
   return (
     <div className="w-full text-gray-300 mt-12">
-      <h2 className="text-2xl text-white font-poppins font-semibold mb-4">
+      <h2 className="text-2xl dark:text-white text-black font-poppins font-semibold mb-4">
         Latest projects
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2  gap-4">
@@ -145,7 +145,7 @@ const LatestProjects = () => {
           </div>
         ))}
       </div>
-      <p className="mt-6 text-white text-sm">
+      <p className="mt-6 dark:text-white text-black text-sm">
         See list of all my projects{" "}
         <Link href="/projects" className="underline text-blue-500">
           On my projects page

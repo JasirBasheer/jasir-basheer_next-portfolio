@@ -8,29 +8,29 @@ const Achievements = () => {
     {
       title: 'Winner #2 Hackero , fetlla',
       image: '/fetla.png',
-      link:'/'
+      link:'https://x.com/fetlla_llp'
     },
     {
       title: 'ThinkerSpace Member',
       image: '/thinkerspace.jpg',
-      link:'/'
+      link:'https://x.com/TinkerSpaceHQ'
     },
     
     {
       title: 'Core Memeber @ Brogrammers',
       image: '/brogrammerscore.jpg',
-      link:'/'
+      link:'https://www.linkedin.com/in/brogrammers-community/'
     },
     {
       title: 'Fetlla Certified Hacker',
       image: '/fetla2.png',
-      link:'/'
+      link:'https://x.com/fetlla_llp'
     },
   ];
 
   return (
     <div className="w-full  mt-8 relative overflow-hidden">
-      <h2 className="text-2xl font-poppins text-white font-semibold mb-4">Achievements</h2>
+      <h2 className="text-2xl font-poppins dark:text-white text-black font-semibold mb-4">Achievements</h2>
       <div className="grid grid-cols-1  lg:grid-cols-2 gap-4">
         {achievements.map((achievement, index) => (
           <div

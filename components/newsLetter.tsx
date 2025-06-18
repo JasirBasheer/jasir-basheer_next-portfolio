@@ -14,7 +14,7 @@ const NewsLetter = () => {
       <ul className="mt-4 space-y-2 text-sm">
         <li className="flex items-center justify-between group cursor-pointer">
           <Link
-            href="#"
+            href="/guestbook"
             className="text-blue-400 group-hover:underline max-w-[13rem]"
           >
             Leave a message on my guestbook
@@ -24,7 +24,7 @@ const NewsLetter = () => {
           </span>
         </li>
         <li className="flex items-center justify-between group cursor-pointer">
-          <Link href="#" className="text-blue-400 group-hover:underline">
+          <Link href="mailto:hi@jasirbasheer.dev" className="text-blue-400 group-hover:underline">
             Send an email
           </Link>
           <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2">
@@ -32,7 +32,7 @@ const NewsLetter = () => {
           </span>
         </li>
         <li className="flex items-center justify-between group cursor-pointer">
-          <Link href="#" className="text-blue-400 group-hover:underline">
+          <Link href="https://github.com/JasirBasheer" className="text-blue-400 group-hover:underline">
             Sponsor me on github
           </Link>
           <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2">

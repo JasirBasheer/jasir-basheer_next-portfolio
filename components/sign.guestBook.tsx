@@ -31,7 +31,7 @@ const SignGuestBook = () => {
           <LuMoon className="w-5 h-5 text-slate-400" />
         )}
       </button>
-      <button onClick={()=> router.push('/guestbook')} className="bg-blue-500 hover:bg-blue-600 transition-colors py-2 px-4 rounded-full text-sm font-medium text-white">
+      <button onClick={()=> router.push('/guestbook')} className="bg-blue-500 hover:bg-blue-600 transition-colors py-2 px-4 rounded-full text-xs font-medium text-white">
         Sign my guestbook
       </button>
     </div>

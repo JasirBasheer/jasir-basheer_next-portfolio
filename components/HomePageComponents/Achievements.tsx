@@ -35,7 +35,7 @@ const Achievements = () => {
         {achievements.map((achievement, index) => (
           <div
             key={index}
-            className={`relative bg-gray-800 rounded-xl overflow-hidden shadow-lg cursor-pointer  transition-transform duration-300 ${(index + 1) % 2 === 0 ? 'rotate-1 hover:rotate-0' : '-rotate-1 hover:rotate-0'}`}
+            className={`relative bg-gray-800 rounded-xl overflow-hidden shadow-lg cursor-pointer  transition-transform duration-300 ${(index + 1) % 2 === 0 ? 'lg:rotate-1 hover:rotate-0' : 'lg:-rotate-1 hover:rotate-0'}`}
           >
             <div
         className="absolute inset-0 z-10"

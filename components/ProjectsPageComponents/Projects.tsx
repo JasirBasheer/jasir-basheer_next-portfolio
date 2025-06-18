@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 // text-[#cfe091ba]
 //text-[#a99561]
-const LatestProjects = () => {
+const Projects = () => {
   const router = useRouter()
   const projects = [
     {
@@ -71,26 +71,26 @@ const LatestProjects = () => {
       isWorkingInProgress: false,
       isClientProject: false,
     },
-     // {
-    //   title: "Netflix clone",
-    //   description:
-    //     "The platform is built with React.js, IMDb API, and Firebase database for efficient data handling and a user-friendly interface.",
-    //   icon: "/netflix.png",
-    //   link: "/",
-    //   isOpenSource: false,
-    //   isWorkingInProgress: false,
-    //   isClientProject: false,
-    // },
-    // {
-    //   title: "Online compiler",
-    //   description:
-    //     "An online coding environment, developed with React.js, offers users a platform to code and collaborate seamlessly.",
-    //   icon: "/thecoder.png",
-    //   link: "/link",
-    //   isOpenSource: false,
-    //   isWorkingInProgress: false,
-    //   isClientProject: false,
-    // },
+     {
+      title: "Netflix clone",
+      description:
+        "The platform is built with React.js, IMDb API, and Firebase database for efficient data handling and a user-friendly interface.",
+      icon: "/netflix.png",
+      link: "/",
+      isOpenSource: false,
+      isWorkingInProgress: false,
+      isClientProject: false,
+    },
+    {
+      title: "Online compiler",
+      description:
+        "An online coding environment, developed with React.js, offers users a platform to code and collaborate seamlessly.",
+      icon: "/thecoder.png",
+      link: "/link",
+      isOpenSource: false,
+      isWorkingInProgress: false,
+      isClientProject: false,
+    },
   ];
 
   return (
@@ -119,17 +119,17 @@ const LatestProjects = () => {
                 />
                 <div className="flex gap-2">
                   {project.isOpenSource && (
-                    <div className="text-[11px] bg-[#38942691] px-2 py-1 text-white rounded-full">
+                    <div className="text-[10px] bg-[#38942691] px-2 py-1 text-white rounded-full">
                       Open-source
                     </div>
                   )}
                   {project.isWorkingInProgress && (
-                    <div className="text-[11px] bg-[#264b9491] px-2 py-1 text-white rounded-full">
+                    <div className="text-[10px] bg-[#264b9491] px-2 py-1 text-white rounded-full">
                       WIP
                     </div>
                   )}
                   {project.isClientProject && (
-                    <div className="text-[11px] bg-[#948d2691] px-2 py-1 text-white rounded-full">
+                    <div className="text-[10px] bg-[#948d2691] px-2 py-1 text-white rounded-full">
                       Client
                     </div>
                   )}
@@ -145,14 +145,8 @@ const LatestProjects = () => {
           </div>
         ))}
       </div>
-      <p className="mt-6 dark:text-white text-black text-sm">
-        See list of all my projects{" "}
-        <Link href="/projects" className="underline text-blue-500">
-          On my projects page
-        </Link>
-      </p>
     </div>
   );
 };
 
-export default LatestProjects;
+export default Projects;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const NewsLetter = () => {
+const ThanksForVisiting = () => {
   return (
     <div className="lg:w-[20rem] h-[14rem] rounded-lg p-5 border-[1px] border-[#1e293b] bg-[#1b2537] bg-opacity-80 backdrop-blur-sm mb-2 font-poppins font-normal">
       <div className="flex items-center gap-2">
@@ -44,5 +44,5 @@ const NewsLetter = () => {
   );
 };
 
-export default NewsLetter;
+export default ThanksForVisiting;
 // https://i.scdn.co/image/ab67706c0000da84b80903ef954198f942abfe6d

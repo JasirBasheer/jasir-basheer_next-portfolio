@@ -4,7 +4,7 @@ import React, { useEffect, useState, use } from 'react'
 
 import { useRouter } from "next/navigation";
 import SignGuestBook from '@/components/sign.guestBook';
-import NewsLetter from '@/components/newsLetter';
+import NewsLetter from '@/components/thanks-for-visiting';
 import { IoIosArrowBack } from "react-icons/io";
 import Prism from 'prismjs';
 

@@ -1,7 +1,7 @@
 import LatestArticles from "@/components/HomePageComponents/LatestArticlesServer";
 import { Hero } from "@/components/HomePageComponents/Hero";
 import SocialMedias from "@/components/HomePageComponents/SocialMedias";
-import NewsLetter from "@/components/newsLetter";
+import ThanksForVisiting from "@/components/thanks-for-visiting";
 import SignGuestBook from "@/components/sign.guestBook";
 import IcreateContent from "@/components/icreate-content";
 import Playlist from "@/components/playlist";
@@ -41,7 +41,7 @@ export default function Home() {
               </div>
             </div>
             <div className="lg:col-span-4  col-span-12  lg:h-[34rem] h-[39rem]  lg:flex lg:flex-wrap justify-center lg:justify-end md:mt-[28rem] mt-3 px-4 lg:px-0">
-              <NewsLetter />
+              <ThanksForVisiting />
               <Playlist />
               <IcreateContent />
             </div>

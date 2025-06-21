@@ -104,8 +104,8 @@ const Projects = () => {
             key={index}
             className={`relative  rounded-lg px-6 py-3 shadow-lg flex flex-col justify-between border-[1px] border-[#1e293b] bg-[#1b2537] bg-opacity-80 backdrop-blur-sm mb-1 font-poppins font-normal transition-transform duration-300 ${
               (index + 1) % 2 === 0
-                ? "lg:rotate-1 hover:rotate-0"
-                : "lg:-rotate-1 hover:rotate-0"
+                ? "lg:rotate-0 hover:rotate-0"
+                : "lg:-rotate-0 hover:rotate-0"
             } cursor-pointer`}
           >
             <div>

@@ -32,7 +32,7 @@ const ThanksForVisiting = () => {
           </span>
         </li>
         <li className="flex items-center justify-between group cursor-pointer">
-          <Link href="https://github.com/JasirBasheer" className="text-blue-400 group-hover:underline">
+          <Link href="https://github.com/sponsors/JasirBasheer" className="text-blue-400 group-hover:underline">
             Sponsor me on github
           </Link>
           <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2">
